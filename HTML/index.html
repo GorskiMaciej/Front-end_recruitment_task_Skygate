@@ -10,6 +10,7 @@
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&amp;subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="../CSS/style.css">
+
 </head>
 
 <body>
@@ -17,8 +18,11 @@
         <header>
             <h1><span>10</span> most polluted cities in...</h1>
         </header>
-        <form action="">
-            <input type="text" placeholder="Type country name"> <button type="button">Search</button>
+        <form autocomplete="off" action="">
+            <div class="autocomplete">
+                <input id="myInput" type="text" name="myCountry" placeholder="Type country name">
+            </div>
+            <button type="button">Search</button>
         </form>
         <main class="cities-container">
             <div class="city">
@@ -63,7 +67,11 @@
             </div>
         </main>
     </div>
-    <script src="../SCRIPTS/script.js"></script>
+    <script src="../SCRIPTS/smallArrows.js"></script>
+    <script src="../SCRIPTS/autocomplete.js"></script>
+    <script>
+        autocomplete(document.getElementById("myInput"), countries);
+    </script>
 </body>
 
 </html>
