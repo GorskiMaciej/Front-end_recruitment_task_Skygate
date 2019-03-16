@@ -66,27 +66,15 @@ header h1 {
       margin-right: 10px;
       line-height: 40px;
       color: white;
-      font-size: 20px;
-      -webkit-transition: 0.5s;
-      transition: 0.5s; }
-    .city .city-title div i.active {
-      -webkit-transform: rotate(180deg);
-              transform: rotate(180deg); }
+      font-size: 20px; }
   .city .city-description {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
     margin: 0;
     padding: 0 15px;
-    min-height: 40px;
+    padding-top: 40px;
     border: 2px solid #5e78bd;
     border-radius: 7px;
     font-size: 16px;
-    font-family: "Montserrat";
-    -webkit-transition: 0.5s;
-    transition: 0.5s; }
+    font-family: "Montserrat"; }
     .city .city-description p {
       display: none; }
-    .city .city-description p.active {
-      display: block;
-      margin-top: 55px; }
 /*# sourceMappingURL=style.css.map */

@@ -33,17 +33,33 @@
                 line-height: 40px;
                 color: white;
                 font-size: 20px;
+                transition: 0.5s;
+            }
+
+            i.active {
+                transform: rotate(180deg);
             }
         }
     }
 
     .city-description {
+        box-sizing: border-box;
         margin: 0;
         padding: 0 15px;
-        padding-top: 40px;
+        min-height: 40px;
         border: 2px solid $main-color;
         border-radius: $border-radius;
         font-size: 16px;
         font-family: $main-font;
+        transition: 0.5s;
+
+        p {
+            display: none;
+        }
+
+        p.active {
+            display: block;
+            margin-top: 55px;
+        }
     }
 }
