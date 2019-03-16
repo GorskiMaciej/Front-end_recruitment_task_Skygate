@@ -43,6 +43,8 @@ form {
     border: none;
     font-size: 16px;
     font-family: "Montserrat"; }
+    form button:hover {
+      cursor: pointer; }
 
 header h1 {
   display: block;
@@ -88,6 +90,8 @@ header h1 {
       font-size: 20px;
       -webkit-transition: 0.5s;
       transition: 0.5s; }
+      .city .city-title div i:hover {
+        cursor: pointer; }
     .city .city-title div i.active {
       -webkit-transform: rotate(180deg);
               transform: rotate(180deg); }
