@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+    position: relative;
+
+    .wrapper {
+        margin: 10px;
+    }
+}
+
+@media (min-width: 640px) {
+    .wrapper {
+        position: absolute;
+        top: 10vh;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 640px;
+    }
+}

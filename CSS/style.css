@@ -1,3 +1,18 @@
+body {
+  margin: 0;
+  position: relative; }
+  body .wrapper {
+    margin: 10px; }
+
+@media (min-width: 640px) {
+  .wrapper {
+    position: absolute;
+    top: 10vh;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 640px; } }
+
 form {
   position: relative;
   margin: 20px 0;
@@ -30,12 +45,16 @@ form {
     font-family: "Montserrat"; }
 
 header h1 {
+  display: block;
   margin: 15px 0;
+  width: 100%;
   color: #353535;
   font-family: "Montserrat"; }
+  header h1 span {
+    font-weight: bold;
+    font-size: 40px; }
 
 .city {
-  width: 100%;
   position: relative;
   margin: 10px 0; }
   .city .city-title {

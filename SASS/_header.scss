@@ -1,7 +1,15 @@
 header {
+
     h1 {
+        display: block;
         margin: 15px 0;
+        width: 100%;
         color: #353535;
         font-family: $main-font;
+
+        span {
+            font-weight: bold;
+            font-size: 40px;
+        }
     }
 }
