@@ -1,6 +1,5 @@
 const btnSearch = document.querySelector('button');
 const arrows = document.querySelectorAll('i');
-// const arrowsTab = [...arrows];
 
 let citiesDescriptions = document.querySelectorAll('.city-description p')
 
