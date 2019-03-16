@@ -1,69 +1,73 @@
-.city {
-    position: relative;
-    margin: 10px 0;
+.cities-container {
+    display: none;
 
-    .city-title {
+    .city {
+        position: relative;
+        margin: 10px 0;
 
-        display: flex;
-        justify-content: space-between;
-        position: absolute;
-        top: 0;
-        left: 0;
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 40px;
-        background-color: $main-color;
-        border-radius: $border-radius;
-        font-family: $main-font;
+        .city-title {
 
-        h2 {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            top: 0;
+            left: 0;
             margin: 0;
-            padding-left: 15px;
-            line-height: 40px;
-            color: white;
-            font-size: 20px;
-            font-weight: normal;
-        }
+            padding: 0;
+            width: 100%;
+            height: 40px;
+            background-color: $main-color;
+            border-radius: $border-radius;
+            font-family: $main-font;
 
-        div {
-            i {
-                margin-right: 10px;
+            h2 {
+                margin: 0;
+                padding-left: 15px;
                 line-height: 40px;
                 color: white;
                 font-size: 20px;
-                transition: 0.5s;
+                font-weight: normal;
+            }
 
-                &:hover {
-                    cursor: pointer;
+            div {
+                i {
+                    margin-right: 10px;
+                    line-height: 40px;
+                    color: white;
+                    font-size: 20px;
+                    transition: 0.5s;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+                i.active {
+                    transform: rotate(180deg);
                 }
             }
+        }
 
-            i.active {
-                transform: rotate(180deg);
+        .city-description {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0 15px;
+            min-height: 40px;
+            border: 2px solid $main-color;
+            border-radius: $border-radius;
+            font-size: 16px;
+            font-family: $main-font;
+            transition: 0.5s;
+
+            p {
+                display: none;
+
             }
-        }
-    }
 
-    .city-description {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0 15px;
-        min-height: 40px;
-        border: 2px solid $main-color;
-        border-radius: $border-radius;
-        font-size: 16px;
-        font-family: $main-font;
-        transition: 0.5s;
-
-        p {
-            display: none;
-
-        }
-
-        p.active {
-            display: block;
-            margin-top: 55px;
+            p.active {
+                display: block;
+                margin-top: 55px;
+            }
         }
     }
 }

@@ -1,10 +1,11 @@
 const btnSearch = document.querySelector('button');
-// const city
+const cityContainer = document.querySelector('.cities-container');
 let selectedCountry = null;
 
 btnSearch.addEventListener('click', () => {
     selectedCountry = document.getElementById('myInput').value;
     checkingCountry(selectedCountry);
+    turnOnCityContainer(cityContainer);
 });
 
 const checkingCountry = (country) => {
@@ -13,3 +14,7 @@ const checkingCountry = (country) => {
         alert("Unavailable country. Select France, Germany, Poland or Spain")
     }
 }
+
+const turnOnCityContainer = (element) => {
+    element.style.display = "block";
+};

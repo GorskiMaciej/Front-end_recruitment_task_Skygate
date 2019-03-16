@@ -83,60 +83,62 @@ header h1 {
     font-weight: bold;
     font-size: 40px; }
 
-.city {
-  position: relative;
-  margin: 10px 0; }
-  .city .city-title {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 40px;
-    background-color: #5e78bd;
-    border-radius: 7px;
-    font-family: "Montserrat"; }
-    .city .city-title h2 {
+.cities-container {
+  display: none; }
+  .cities-container .city {
+    position: relative;
+    margin: 10px 0; }
+    .cities-container .city .city-title {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      position: absolute;
+      top: 0;
+      left: 0;
       margin: 0;
-      padding-left: 15px;
-      line-height: 40px;
-      color: white;
-      font-size: 20px;
-      font-weight: normal; }
-    .city .city-title div i {
-      margin-right: 10px;
-      line-height: 40px;
-      color: white;
-      font-size: 20px;
+      padding: 0;
+      width: 100%;
+      height: 40px;
+      background-color: #5e78bd;
+      border-radius: 7px;
+      font-family: "Montserrat"; }
+      .cities-container .city .city-title h2 {
+        margin: 0;
+        padding-left: 15px;
+        line-height: 40px;
+        color: white;
+        font-size: 20px;
+        font-weight: normal; }
+      .cities-container .city .city-title div i {
+        margin-right: 10px;
+        line-height: 40px;
+        color: white;
+        font-size: 20px;
+        -webkit-transition: 0.5s;
+        transition: 0.5s; }
+        .cities-container .city .city-title div i:hover {
+          cursor: pointer; }
+      .cities-container .city .city-title div i.active {
+        -webkit-transform: rotate(180deg);
+                transform: rotate(180deg); }
+    .cities-container .city .city-description {
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      margin: 0;
+      padding: 0 15px;
+      min-height: 40px;
+      border: 2px solid #5e78bd;
+      border-radius: 7px;
+      font-size: 16px;
+      font-family: "Montserrat";
       -webkit-transition: 0.5s;
       transition: 0.5s; }
-      .city .city-title div i:hover {
-        cursor: pointer; }
-    .city .city-title div i.active {
-      -webkit-transform: rotate(180deg);
-              transform: rotate(180deg); }
-  .city .city-description {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    margin: 0;
-    padding: 0 15px;
-    min-height: 40px;
-    border: 2px solid #5e78bd;
-    border-radius: 7px;
-    font-size: 16px;
-    font-family: "Montserrat";
-    -webkit-transition: 0.5s;
-    transition: 0.5s; }
-    .city .city-description p {
-      display: none; }
-    .city .city-description p.active {
-      display: block;
-      margin-top: 55px; }
+      .cities-container .city .city-description p {
+        display: none; }
+      .cities-container .city .city-description p.active {
+        display: block;
+        margin-top: 55px; }
 /*# sourceMappingURL=style.css.map */
