@@ -7,3 +7,11 @@ Add an input field for a country name, which should work only for Poland, German
 Fetch (and render) names of 10 most polluted cities in those countries (based on input value) from https://docs.openaq.org/.
 Show cities descriptions as an accordion based on the data from Wikipedia API: https://www.mediawiki.org/wiki/API:Query.
 Make the input field value persistent between page reloads.
+
+Done:
+- adding style CSS using scss
+- adding text with autocomplete
+- works only for selected countries
+- using API and fetch json file
+Failed: 
+- adding json files elements to array
