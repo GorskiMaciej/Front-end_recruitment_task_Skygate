@@ -1,6 +1,11 @@
 # Front-end_recruitment_task_Skygate
 Front-end recruitment task for Skygate
 
+How to open:
+1. Download repository as zip file.
+2. Unzip file
+3. Open: \Place wher you unzipped file\Front-end_recruitment_task_Skygate-master\HTML\index.html
+
 In order to get the highest possible score, all of the following requirements should be completed. Candidates are allowed to use any technology which they consider most suitable. Try to use the best UX/UI practices, feel free in design conception. Good luck!
 
 Add an input field for a country name, which should work only for Poland, Germany, Spain and France. It should have an autocomplete.
