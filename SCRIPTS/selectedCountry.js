@@ -120,7 +120,7 @@ async function getMostPollutedCities() {
             // console.log(document.querySelector(`div.city:nth-child(${i+1})`)); //debug showing selected divs
             document.querySelector(`div.city:nth-child(${i+1}) div h2`).textContent = `${i+1}. ${mostPollutedCitiesWithoutRepeats[i].city}`;
         }
-        //fetching citise descriptions
+        //fetching citise descriptions and adding them to dvi p.
         for (let i = 0; i < mostPollutedCitiesWithoutRepeats.length; i++) {
             axios.get(urlCitiesDescriptions + mostPollutedCitiesWithoutRepeats[i].city)
                 .then(response => {
@@ -128,9 +128,9 @@ async function getMostPollutedCities() {
                     for (let key in response.data.query.pages) {
                         id = key;
                     }
-                    console.log(id)
+                    // console.log(id)
                     selectedCitiesDescriptions[i] = response.data.query.pages[id].extract;
-                    console.log(selectedCitiesDescriptions[i]);
+                    // console.log(selectedCitiesDescriptions[i]);
                     document.querySelector(`div.city:nth-child(${i+1}) div p`).textContent = `${selectedCitiesDescriptions[i]}`;
                 });
 
