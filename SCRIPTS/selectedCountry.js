@@ -111,14 +111,14 @@ async function getMostPollutedCities() {
         // });
         mostPollutedCitiesWithoutRepeats = mostPollutedCitiesWithoutRepeats.splice(0, 10);
 
-        mostPollutedCitiesWithoutRepeats.forEach(element => { //showing objects with cities names and mesurements values
-            console.log(`${element.city}: ${element.value}`);
-        });
+        // mostPollutedCitiesWithoutRepeats.forEach(element => { //showing objects with cities names and mesurements values
+        //     console.log(`${element.city}: ${element.value}`);
+        // });
 
         // Adding cities names to list showing most polluted cities in selected country
         for (let i = 0; i < numberOfMostPollutedCieties; i++) {
-            console.log(document.querySelector(`div.city:nth-child(${i+1})`));
-            document.querySelector(`div.city:nth-child(${i+1}) div h2`).textContent = mostPollutedCitiesWithoutRepeats[i].city;
+            // console.log(document.querySelector(`div.city:nth-child(${i+1})`)); //debug showing selected divs
+            document.querySelector(`div.city:nth-child(${i+1}) div h2`).textContent = `${i+1}. ${mostPollutedCitiesWithoutRepeats[i].city}`;
         }
 
 
