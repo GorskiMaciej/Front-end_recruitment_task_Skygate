@@ -120,28 +120,22 @@ async function getMostPollutedCities() {
             // console.log(document.querySelector(`div.city:nth-child(${i+1})`)); //debug showing selected divs
             document.querySelector(`div.city:nth-child(${i+1}) div h2`).textContent = `${i+1}. ${mostPollutedCitiesWithoutRepeats[i].city}`;
         }
-
-        let descriptionArray = [];
+        //fetching citise descriptions
         for (let i = 0; i < mostPollutedCitiesWithoutRepeats.length; i++) {
-            await fetch(urlCitiesDescriptions + mostPollutedCitiesWithoutRepeats[i].city)
-                .then(res => res.json())
-                .then((data) => {
-                    selectedCitiesDescriptions[i] = data.query.pages;
-                })
-                .catch(err => {
-                    throw err
+            axios.get(urlCitiesDescriptions + mostPollutedCitiesWithoutRepeats[i].city)
+                .then(response => {
+                    let id;
+                    for (let key in response.data.query.pages) {
+                        id = key;
+                    }
+                    console.log(id)
+                    selectedCitiesDescriptions[i] = response.data.query.pages[id].extract;
+                    console.log(selectedCitiesDescriptions[i]);
+                    document.querySelector(`div.city:nth-child(${i+1}) div p`).textContent = `${selectedCitiesDescriptions[i]}`;
                 });
 
         }
-        // selectedCitiesDescriptions.forEach(element, () => {
-        //     console.log(element);
-        // })
 
-        for (let i = 0; i < numberOfMostPollutedCieties; i++) {
-
-            // document.querySelector(`div.city:nth-child(${i+1}) div p`).textContent = `${i+1}. ${mostPollutedCitiesWithoutRepeats[i].city}`;
-            document.querySelector(`div.city:nth-child(${i+1}) div p`).textContent = `Description of city`;
-        }
 
 
     } else {
