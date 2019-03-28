@@ -8,11 +8,11 @@ let mostPollutedCities = [];
 let arrayMeasurementValues = [];
 let arrayCitiesNames = [];
 let pairCityValue = [];
-
+let selectedCitiesDescriptions = [];
 let mostPollutedCitiesWithoutRepeats = [];
 let found = false;
 let count = 0;
-
+let urlCitiesDescriptions = `https://en.wikipedia.org/w/api.php?format=json&origin=*&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=`
 let url = `https://api.openaq.org/v1/latest?country=${countryCode}&parameter=${typeOfPollution}`;
 let urlCountries = `https://api.openaq.org/v1/countries`;
 
@@ -119,6 +119,28 @@ async function getMostPollutedCities() {
         for (let i = 0; i < numberOfMostPollutedCieties; i++) {
             // console.log(document.querySelector(`div.city:nth-child(${i+1})`)); //debug showing selected divs
             document.querySelector(`div.city:nth-child(${i+1}) div h2`).textContent = `${i+1}. ${mostPollutedCitiesWithoutRepeats[i].city}`;
+        }
+
+        let descriptionArray = [];
+        for (let i = 0; i < mostPollutedCitiesWithoutRepeats.length; i++) {
+            await fetch(urlCitiesDescriptions + mostPollutedCitiesWithoutRepeats[i].city)
+                .then(res => res.json())
+                .then((data) => {
+                    selectedCitiesDescriptions[i] = data.query.pages;
+                })
+                .catch(err => {
+                    throw err
+                });
+
+        }
+        // selectedCitiesDescriptions.forEach(element, () => {
+        //     console.log(element);
+        // })
+
+        for (let i = 0; i < numberOfMostPollutedCieties; i++) {
+
+            // document.querySelector(`div.city:nth-child(${i+1}) div p`).textContent = `${i+1}. ${mostPollutedCitiesWithoutRepeats[i].city}`;
+            document.querySelector(`div.city:nth-child(${i+1}) div p`).textContent = `Description of city`;
         }
 
 
