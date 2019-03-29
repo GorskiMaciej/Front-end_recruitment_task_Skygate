@@ -16,9 +16,6 @@ let urlCitiesDescriptions = `https://en.wikipedia.org/w/api.php?format=json&orig
 let url = `https://api.openaq.org/v1/latest?country=${countryCode}&parameter=${typeOfPollution}`;
 let urlCountries = `https://api.openaq.org/v1/countries`;
 
-
-
-
 const turnOnCityContainer = (element) => {
     element.style.display = "block";
 };
@@ -29,7 +26,7 @@ async function getMostPollutedCities() {
 
     selectedCountry = document.getElementById('myInput').value;
     if (selectedCountry == "France" || selectedCountry == "Germany" || selectedCountry == "Poland" || selectedCountry == "Spain") {
-        turnOnCityContainer(cityContainer);
+
 
         //fetching countries and getting countryCode
         await fetch(urlCountries)
@@ -133,15 +130,11 @@ async function getMostPollutedCities() {
                     // console.log(selectedCitiesDescriptions[i]);
                     document.querySelector(`div.city:nth-child(${i+1}) div p`).textContent = `${selectedCitiesDescriptions[i]}`;
                 });
-
         }
-
-
-
+        turnOnCityContainer(cityContainer);
     } else {
         alert("Unavailable country. Select France, Germany, Poland or Spain")
     }
-
 }
 
 btnSearch.addEventListener('click', getMostPollutedCities);
