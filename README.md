@@ -2,6 +2,9 @@
 Front-end recruitment task for Skygate
 
 How to open:
+A: Click: https://gorskimaciej.github.io/Front-end_recruitment_task_Skygate/
+or
+B:
 1. Download repository as zip file.
 2. Unzip file
 3. Open: \Place wher you unzipped file\Front-end_recruitment_task_Skygate-master\HTML\index.html
